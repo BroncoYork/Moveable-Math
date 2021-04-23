@@ -2,7 +2,7 @@ import tkinter
 import time
 from equations import *
 from serial_functions import serial_initiate, serial_read, find_serial_com
-from data_functions import clean_serial_data, interpret_data
+from data_functions import clean_serial_data, interpret_data, interpret_raw_data, single_interpret_data
 from tkinter import messagebox
 
 
@@ -50,15 +50,19 @@ next_eq_button.grid(column=0, row=9)
 
 # Define column_info to denote which column values correspond to variables
 column_info = ['a', 'a', 'b', 'b', 'b', 'c', 'c', 'c']
+# split_col = 4
 
 # Continuous main loop
 while 1:
     # Read in raw serial data and clean up
     raw_serial_data = str(serial_read(serial_device))
+
     data = clean_serial_data(raw_serial_data)
 
     # Get a, b, c variables from raw values
-    a_live, b_live, c_live = interpret_data(data, column_info)
+    int_data = single_interpret_data(data)
+    a_live, b_live, c_live = interpret_data(int_data, column_info)
+    # a_live, b_live, c_live = interpret_raw_data(data, split_col)
 
     # Update the live displayed equation on-screen with new values
     eq_live = eq(a_live, b_live, c_live)

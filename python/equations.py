@@ -24,10 +24,10 @@ class eq:
 
 
 # Define preset equations (there might be a more efficient method)
-eq_1 = eq(1, 3, 8)
-eq_2 = eq(1, 5, 14)
-eq_3 = eq(1, 2, 10)
-eq_4 = eq(2, 6, 16)
+eq_1 = eq(1, 3, 7)
+eq_2 = eq(1, 4, 9)
+eq_3 = eq(1, 2, 5)
+eq_4 = eq(2, 4, 8)
 
 # Create list of equation objects
 equation_list = [eq_1, eq_2, eq_3, eq_4]
