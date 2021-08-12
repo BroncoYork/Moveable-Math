@@ -5,7 +5,7 @@ Movable math is a product that allows students to learn fundamental algebra thro
 
 In this repository you will find the MATLAB software used to determine resistor values, arduino code to read user actions, and python code to display user changes on a GUI. Additionally, you will see the DXF files used for laser cutting and images of our design process. 
 
-More information can be found [here](https://sites.google.com/view/moveable-math/home) on our website. 
+More information can be found [here](https://movablemath.com/) on our website. 
 
 
 
